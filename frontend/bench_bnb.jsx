@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { signup, login, logout } from './util/session_api_util';
+
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   ReactDOM.render(
@@ -9,4 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     </h1>,
     root
   );
+
+  window.signup = signup; //For this commit only, for testing
+  window.login = login;
+  window.logout = logout;
 });
