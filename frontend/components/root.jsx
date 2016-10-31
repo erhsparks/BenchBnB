@@ -8,11 +8,14 @@ import {
   Link
 } from 'react-router';
 import App from './app.jsx';
+import SessionFormContainer from './session/session_form_container';
 
 const Root = ({ store }) => (
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path='/' component={App} />
+        <Route path='/login' component={SessionFormContainer} />
+        <Route path='/signup' component={SessionFormContainer} />
     </Router>
   </Provider>
 );
