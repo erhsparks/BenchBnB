@@ -12,6 +12,7 @@ const _defaultSession = {
 
 const SessionReducer = (state = _defaultSession, action) => {
   Object.freeze(state);
+  Object.freeze(_defaultSession);
 
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
@@ -33,3 +34,5 @@ const SessionReducer = (state = _defaultSession, action) => {
       return merge({}, state);
   }
 };
+
+export default SessionReducer;
